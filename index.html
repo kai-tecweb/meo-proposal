@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月3,000円でできるMEO自動化システム - あなたのお店をGoogle検索で上位表示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2E86AB, #4575B4);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .hero-description {
+            font-size: 14px;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        
+        .section {
+            padding: 40px 20px;
+        }
+        
+        .section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #2E86AB;
+            margin-bottom: 20px;
+            border-left: 5px solid #2E86AB;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            font-size: 18px;
+            color: #4575B4;
+            margin: 20px 0 10px 0;
+        }
+        
+        .problem-box {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            border-left: 5px solid #d32f2f;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .solution-box {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            border-left: 5px solid #388e3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-left: 5px solid #1976d2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: #2E86AB;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .before {
+            background-color: #ffebee !important;
+        }
+        
+        .after {
+            background-color: #e8f5e8 !important;
+        }
+        
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .flow-number {
+            background: #2E86AB;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .flow-arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #2E86AB;
+            margin: 10px 0;
+        }
+        
+        .price-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .price-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .price-card.recommended {
+            border-color: #2E86AB;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        }
+        
+        .price-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin: 10px 0;
+        }
+        
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #388e3c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #f57c00;
+        }
+        
+        .highlight-large {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d32f2f;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff9c4, #f9fbe7);
+            border-radius: 10px;
+            border: 2px solid #689f38;
+        }
+        
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .meo-explanation {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 3px solid #8e24aa;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #2E86AB, #4575B4);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 24px;
+            }
+            
+            .comparison-table {
+                font-size: 12px;
+            }
+            
+            .flow-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .flow-number {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="hero-title">🚀 月3,000円でできるMEO自動化システム</h1>
+            <p class="hero-subtitle">あなたのお店をGoogle検索・マップで上位表示させる秘密兵器</p>
+            <div class="hero-description">
+                <strong>「うちの店、Google検索で全然出てこない...」</strong><br>
+                そんなお悩みを月額3,000円で解決します！<br>
+                面倒なMEO対策を完全自動化 → お客さんがどんどん見つけてくれるお店に変身
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>📍 そもそも「MEO対策」って何？</h2>
+            
+            <div class="meo-explanation">
+                <h3>🔍 こんな経験ありませんか？</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 40px;">📱</div>
+                        <p><strong>お客さんがスマホで<br>「近くのラーメン屋」と検索</strong></p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 40px;">🗺️</div>
+                        <p><strong>地図に赤いピンで<br>お店が表示される</strong></p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 40px;">⭐</div>
+                        <p><strong>お店の情報と口コミを見て<br>来店を決める</strong></p>
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>MEO対策とは：</strong><br>
+                    この「地図検索」で自分のお店を上位に表示させて、より多くのお客さんに見つけてもらうための活動です。
+                    <br><br>
+                    <strong>Map Engine Optimization</strong> = 地図エンジン最適化の略
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>😰 店主の皆さんの本当の悩み</h2>
+            
+            <div class="problem-box">
+                <h3>🔥 こんなことで困っていませんか？</h3>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>よくある悩み</th>
+                        <th>その結果</th>
+                        <th>失っているもの</th>
+                    </tr>
+                    <tr class="before">
+                        <td>💔 Google検索で同業他店ばかり上位表示</td>
+                        <td>→ お客さんに見つけてもらえない</td>
+                        <td style="color: #d32f2f; font-weight: bold;">新規顧客の機会損失</td>
+                    </tr>
+                    <tr class="before">
+                        <td>😅 お客さんからの口コミに返事できていない</td>
+                        <td>→ 「このお店は客を大事にしない」と思われる</td>
+                        <td style="color: #d32f2f; font-weight: bold;">リピーター離れ</td>
+                    </tr>
+                    <tr class="before">
+                        <td>📅 営業時間変更をGoogleに更新し忘れ</td>
+                        <td>→ 「開いてると思って来たのに閉まってた」</td>
+                        <td style="color: #d32f2f; font-weight: bold;">信頼失墜</td>
+                    </tr>
+                    <tr class="before">
+                        <td>📸 お店の写真や情報が古いまま</td>
+                        <td>→ 魅力が伝わらない</td>
+                        <td style="color: #d32f2f; font-weight: bold;">集客力低下</td>
+                    </tr>
+                    <tr class="before">
+                        <td>😵 MEO業者に頼むと月3万円〜と高額</td>
+                        <td>→ 続けられない</td>
+                        <td style="color: #d32f2f; font-weight: bold;">経営圧迫</td>
+                    </tr>
+                </table>
+                
+                <div class="highlight-large">
+                    💸 結果：せっかく美味しい料理を作っているのに、お客さんに知ってもらえない...
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>✨ 私たちのシステムで全て解決！</h2>
+            
+            <div class="solution-box">
+                <h3>🎯 MEO対策を月3,000円で完全自動化</h3>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>システムがやってくれること</th>
+                        <th>あなたへの効果</th>
+                        <th>お客さんの反応</th>
+                    </tr>
+                    <tr class="after">
+                        <td>🚨 新しい口コミを即座にお知らせ</td>
+                        <td>→ 見逃しゼロで必ず返事できる</td>
+                        <td style="color: #388e3c; font-weight: bold;">「丁寧なお店だ」と評価アップ</td>
+                    </tr>
+                    <tr class="after">
+                        <td>⚡ ワンクリックで適切な返事を投稿</td>
+                        <td>→ 時間節約、でも心のこもった対応</td>
+                        <td style="color: #388e3c; font-weight: bold;">「また行きたい」リピーター増加</td>
+                    </tr>
+                    <tr class="after">
+                        <td>🕐 営業時間変更を簡単更新</td>
+                        <td>→ 「臨時休業」もボタン一つ</td>
+                        <td style="color: #388e3c; font-weight: bold;">「情報が正確で信頼できる」</td>
+                    </tr>
+                    <tr class="after">
+                        <td>📝 定期的なお店情報の投稿</td>
+                        <td>→ 常に新鮮な情報発信</td>
+                        <td style="color: #388e3c; font-weight: bold;">「活気のあるお店」で興味度アップ</td>
+                    </tr>
+                    <tr class="after">
+                        <td>💰 MEO業者の1/10の料金</td>
+                        <td>→ 継続可能な経営</td>
+                        <td style="color: #388e3c; font-weight: bold;">長期的な関係構築</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="highlight-large">
+                🎉 結果：Google検索で上位表示 → 新規客増加 → 売上アップ！
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🔄 システムの仕組み（超わかりやすく）</h2>
+            
+            <div class="info-box">
+                <h3>🤖 あなたの代わりに24時間働く「デジタル店員」だと思ってください</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 20px 0;">
+                    <div>
+                        <h4 style="color: #d32f2f;">❌ 今まで（手作業）</h4>
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div>お客さんが口コミ投稿</div>
+                        </div>
+                        <div class="flow-arrow">⬇️</div>
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div>店主は気づかない（忙しい）</div>
+                        </div>
+                        <div class="flow-arrow">⬇️</div>
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div style="color: #d32f2f; font-weight: bold;">数日〜数週間後に発見...</div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #388e3c;">✅ 私たちのシステム（自動化）</h4>
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div>お客さんが口コミ投稿</div>
+                        </div>
+                        <div class="flow-arrow">⬇️ <strong>1分以内</strong></div>
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div>システムが即座に検知してメール通知</div>
+                        </div>
+                        <div class="flow-arrow">⬇️ <strong>2分以内</strong></div>
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div style="color: #388e3c; font-weight: bold;">スマホでワンクリック返信完了</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <strong>👀 Google検索の仕組み：</strong><br>
+                Googleは「新しい口コミにちゃんと返事している」「営業情報が正確」「定期的に更新している」お店を<strong>「お客さんに役立つ良いお店」</strong>と判断して、検索結果の上位に表示してくれます。
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🤖 他では真似できない「AI搭載」自動化機能</h2>
+            
+            <div class="solution-box">
+                <h3>🧠 ここが他社との決定的な違い：単純作業の代行ではなく「賢い判断」まで自動化</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #2E86AB;">
+                        <h4>📝 AI返信文生成</h4>
+                        <p><strong>やってくれること：</strong><br>
+                        口コミの内容を解析して、その人に最適な返信文を自動生成</p>
+                        <p><strong>具体例：</strong><br>
+                        「美味しかった」→感謝+おすすめメニュー紹介<br>
+                        「店員さんが親切」→接客への感謝+チーム全体への言及<br>
+                        「少し塩辛い」→お詫び+改善への取り組み</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #4575B4;">
+                        <h4>📊 投稿タイミング最適化</h4>
+                        <p><strong>やってくれること：</strong><br>
+                        あなたのお店の客層がGoogleを見る時間を分析して、最適なタイミングで投稿</p>
+                        <p><strong>具体例：</strong><br>
+                        ランチ営業→11:30頃に「本日のおすすめ」<br>
+                        ディナー営業→17:00頃に「今夜の特別メニュー」<br>
+                        客足が少ない時→割引情報を自動投稿</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #388e3c;">
+                        <h4>🎯 競合監視&対策提案</h4>
+                        <p><strong>やってくれること：</strong><br>
+                        同一エリアの競合店を自動検出し、投稿状況や評価を監視して対抗策を提案</p>
+                        <p><strong>具体例：</strong><br>
+                        半径1km以内の同業店をリストアップ<br>
+                        「A店は週5回投稿→あなたも週3回を目指しましょう」<br>
+                        「B店が深夜営業アピール→ランチで差別化しましょう」<br>
+                        「C店の評価が上昇中→要注意、新メニューで対抗」</p>
+                        
+                        <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                            <h5>📊 競合分析ダッシュボード例</h5>
+                            <p style="font-size: 12px; font-family: monospace;">
+                            📍 麺屋武蔵　　★4.3 (150件) 300m<br>
+                            　 最新投稿: 2時間前「特製味噌ラーメン」<br><br>
+                            📍 一蘭 渋谷店　★4.1 (280件) 500m<br>
+                            　 最新投稿: 1日前「深夜営業中」<br><br>
+                            💡おすすめアクション：<br>
+                            「ランチタイムアピールで差別化を」
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #f57c00;">
+                        <h4>📈 効果予測&改善提案</h4>
+                        <p><strong>やってくれること：</strong><br>
+                        現在の状況を分析して「次に何をすれば一番効果的か」を提案</p>
+                        <p><strong>具体例：</strong><br>
+                        「写真を3枚追加すれば検索順位2位アップ予測」<br>
+                        「営業時間を30分延長で来店数15%増の可能性」<br>
+                        「この時期は○○系の投稿が効果的」</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #9C27B0;">
+                        <h4>📝 AIブログ連携（業界初！）</h4>
+                        <p><strong>やってくれること：</strong><br>
+                        AIが自動生成したブログ記事を、Googleマイビジネス用に最適化して自動投稿</p>
+                        <p><strong>具体例：</strong><br>
+                        AIブログ：「冬の温まるラーメン特集（1000文字記事）」<br>
+                        ↓自動変換<br>
+                        Googleマイビジネス：「体の芯から温まる冬限定ラーメン始めました！」<br>
+                        月10記事 → 30投稿を完全自動化</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-large">
+                    🎯 つまり：「ブログでSEO対策」+「Googleマイビジネスで地域集客」が完全自動化
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🔗 AIブログ連携システム（業界初の技術）</h2>
+            
+            <div class="solution-box">
+                <h3>📚 1つのAI記事から複数の集客チャネルを自動化</h3>
+                
+                <div style="background: linear-gradient(135deg, #f3e5f5, #e1bee7); padding: 25px; border-radius: 15px; margin: 20px 0;">
+                    <h4>🔄 自動連携の流れ</h4>
+                    
+                    <div class="flow-step" style="background: white; margin: 15px 0;">
+                        <div class="flow-number">1</div>
+                        <div><strong>AIがブログ記事を自動生成</strong><br>「冬のおすすめメニュー特集」（1000文字）</div>
+                    </div>
+                    
+                    <div class="flow-arrow">⬇️ <strong>自動変換</strong></div>
+                    
+                    <div class="flow-step" style="background: white; margin: 15px 0;">
+                        <div class="flow-number">2</div>
+                        <div><strong>Googleマイビジネス用に最適化</strong><br>「寒い日は当店の温かいラーメンで体の芯から温まりませんか？」（150文字）</div>
+                    </div>
+                    
+                    <div class="flow-arrow">⬇️ <strong>自動投稿</strong></div>
+                    
+                    <div class="flow-step" style="background: white; margin: 15px 0;">
+                        <div class="flow-number">3</div>
+                        <div><strong>最適タイミングで自動投稿</strong><br>ランチタイム前（11:30）に自動投稿完了</div>
+                    </div>
+                </div>
+                
+                <table class="comparison-table" style="margin: 20px 0;">
+                    <tr>
+                        <th>従来の方法</th>
+                        <th>AIブログ連携システム</th>
+                        <th>効果</th>
+                    </tr>
+                    <tr>
+                        <td>ブログとGoogleマイビジネスを別々に更新</td>
+                        <td>1つのAI記事で両方自動更新</td>
+                        <td style="color: #388e3c; font-weight: bold;">作業時間90%削減</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td>月30回の手作業投稿</td>
+                        <td>月10記事で30投稿を自動生成</td>
+                        <td style="color: #388e3c; font-weight: bold;">投稿頻度3倍増</td>
+                    </tr>
+                    <tr>
+                        <td>ネタ切れで投稿が止まる</td>
+                        <td>AIが季節・トレンドを自動分析してネタ提供</td>
+                        <td style="color: #388e3c; font-weight: bold;">継続投稿率100%</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        </section>
+
+        <section class="section">
+            <h2>🕵️ 競合分析機能（他社にはない独自機能）</h2>
+            
+            <div class="info-box">
+                <h3>🏪 同一エリアの競合店を自動検出・分析</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 20px; border-radius: 10px; border-left: 5px solid #f57c00;">
+                        <h4>🗺️ 自動競合検出</h4>
+                        <p><strong>システムがやってくれること：</strong></p>
+                        <p>• 半径1km以内の同業店を自動リストアップ<br>
+                        • 距離・評価・レビュー数で並び替え<br>
+                        • 新規参入店も自動で検知</p>
+                        
+                        <div style="background: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin: 10px 0; font-size: 11px;">
+                        <strong>📍 検出例：</strong><br>
+                        ├ 麺屋武蔵　★4.3 (150件) 300m<br>
+                        ├ 一蘭渋谷店　★4.1 (280件) 500m<br>
+                        └ らーめん花月　★3.9 (90件) 200m
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #e8f5e8, #c8e6c9); padding: 20px; border-radius: 10px; border-left: 5px solid #388e3c;">
+                        <h4>📝 競合投稿分析</h4>
+                        <p><strong>システムがやってくれること：</strong></p>
+                        <p>• 競合店の投稿内容を自動取得<br>
+                        • 投稿頻度・時間帯を分析<br>
+                        • 人気投稿のパターンを検出</p>
+                        
+                        <div style="background: rgba(255,255,255,0.8); padding: 10px; border-radius: 5px; margin: 10px 0; font-size: 11px;">
+                        <strong>📊 分析例：</strong><br>
+                        「麺屋武蔵は週5回投稿」<br>
+                        「一蘭は深夜営業をアピール」<br>
+                        「花月は投稿頻度が低い（チャンス！）」
+                        </div>
+                    </div>
+                </div>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>手作業での競合調査</th>
+                        <th>私たちのシステム</th>
+                        <th>時間短縮効果</th>
+                    </tr>
+                    <tr>
+                        <td>Google検索で1店舗ずつ確認</td>
+                        <td>半径1km内の競合店を自動リストアップ</td>
+                        <td style="color: #388e3c; font-weight: bold;">調査時間95%削減</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td>各店のGoogleマイビジネスを個別チェック</td>
+                        <td>全競合店の投稿を一覧表示</td>
+                        <td style="color: #388e3c; font-weight: bold;">確認時間90%削減</td>
+                    </tr>
+                    <tr>
+                        <td>月1回程度の手動チェック</td>
+                        <td>24時間365日自動監視</td>
+                        <td style="color: #388e3c; font-weight: bold;">見逃しゼロ</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="solution-box">
+                <h3>📱 競合分析ダッシュボード</h3>
+                
+                <div style="background: white; padding: 20px; border-radius: 10px; margin: 20px 0; font-family: monospace; font-size: 14px; border: 2px dashed #2E86AB;">
+                    <div style="background: #2E86AB; color: white; padding: 10px; margin: -20px -20px 15px -20px; border-radius: 8px 8px 0 0;">
+                        <strong>🏪 競合店一覧 - あなたのお店周辺</strong>
+                    </div>
+                    
+                    <div style="background: #f0f8ff; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                        <strong>📍 麺屋武蔵</strong>　　★4.3 (150件) 300m 🔥<br>
+                        　最新投稿: 2時間前「寒い日は特製味噌ラーメンで温まろう」<br>
+                        　投稿頻度: 週5回（高頻度！）<br>
+                        　人気時間: 12:00-13:00<br><br>
+                        
+                        <strong>📍 一蘭 渋谷店</strong>　★4.1 (280件) 500m<br>
+                        　最新投稿: 1日前「深夜まで営業中！」<br>
+                        　投稿頻度: 週2回<br>
+                        　特徴: 深夜営業アピール<br><br>
+                        
+                        <strong>📍 らーめん花月</strong>　★3.9 (90件) 200m ⚠️<br>
+                        　最新投稿: 3日前「新メニュー登場」<br>
+                        　投稿頻度: 月2回（少ない）<br>
+                        　状況: 投稿頻度低下中
+                    </div>
+                    
+                    <div style="background: #fff9c4; padding: 15px; border-radius: 5px;">
+                        <strong>💡 AIからの提案</strong><br>
+                        ✓ 麺屋武蔵が積極投稿中→あなたも週3回投稿を目指しましょう<br>
+                        ✓ 一蘭が深夜特化→ランチタイムで差別化のチャンス<br>
+                        ✓ 花月の投稿が減少→この隙にシェア拡大可能
+                    </div>
+                </div>
+                
+                <div class="highlight-large">
+                    🎯 結果：周辺の競合動向を完全把握 → 常に最適な戦略で戦える
+                </div>
+            </div>
+
+        <section class="section">
+            <h2>🏢 複数店舗管理機能（超プレミアムプラン）</h2>
+            
+            <div class="info-box">
+                <h3>🎯 チェーン店・多店舗経営者向け究極の自動化</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #FF6F00;">
+                        <h4>🗺️ 地域特化自動投稿</h4>
+                        <p><strong>例：ラーメンチェーン3店舗</strong></p>
+                        <p>
+                        新宿店：「新宿で話題の限定メニュー」<br>
+                        渋谷店：「渋谷のサラリーマンに人気の...」<br>
+                        池袋店：「池袋駅近で深夜営業中」<br>
+                        </p>
+                        <p><strong>1つのブログ記事→3店舗分の地域特化投稿</strong></p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #FF6F00;">
+                        <h4>⚡ 一斉投稿&個別投稿</h4>
+                        <p><strong>キャンペーン告知：</strong>全店舗一斉投稿</p>
+                        <p><strong>店舗限定情報：</strong>個別投稿</p>
+                        <p><strong>臨時休業：</strong>該当店舗のみ即座更新</p>
+                        <p><strong>→ 本部が全店舗を一元管理</strong></p>
+                    </div>
+                </div>
+                
+                <div class="highlight-large">
+                    💰 10店舗のMEO管理を外注する場合：月30万円<br>
+                    私たちのシステム：月15,000円<br>
+                    <strong>なんと95%のコスト削減！</strong>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💽 技術力で差をつける「完全自動学習システム」</h2>
+            
+            <div class="info-box">
+                <h3>🔬 使えば使うほど賢くなる：機械学習エンジン搭載</h3>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>従来のMEOツール</th>
+                        <th>私たちのシステム</th>
+                        <th>その結果</th>
+                    </tr>
+                    <tr>
+                        <td>決まった時間に決まった投稿</td>
+                        <td>過去の反応を学習して最適化</td>
+                        <td style="color: #388e3c; font-weight: bold;">エンゲージメント300%向上</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td>テンプレート返信のみ</td>
+                        <td>口コミ内容をAI解析して個別対応</td>
+                        <td style="color: #388e3c; font-weight: bold;">お客様満足度大幅アップ</td>
+                    </tr>
+                    <tr>
+                        <td>手動で競合チェック</td>
+                        <td>AI が24時間競合監視・投稿分析</td>
+                        <td style="color: #388e3c; font-weight: bold;">常に一歩先を行く戦略</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td>効果測定は月1回</td>
+                        <td>リアルタイム効果測定&改善提案</td>
+                        <td style="color: #388e3c; font-weight: bold;">ROI最大200%向上</td>
+                    </tr>
+                    <tr>
+                        <td>競合情報は自分で調査</td>
+                        <td>同一エリア競合店を自動検出・分析</td>
+                        <td style="color: #388e3c; font-weight: bold;">市場動向を常に把握</td>
+                    </tr>
+                </table>
+                
+                <div class="highlight">
+                    <strong>🎯 学習データの威力：</strong><br>
+                    開業40年以上、5,000プロジェクトの経験を持つ岩崎の知見 + 最新AI技術 = 他社では真似できない精度<br><br>
+                    <strong>🚀 AIブログ連携：</strong><br>
+                    SEO最適化されたAIブログシステムとの連携で、「コンテンツマーケティング + MEO対策」を同時自動化（業界初）
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💰 料金プラン</h2>
+            
+            <div class="price-table">
+                <div class="price-card">
+                    <h4>🆓 無料お試し</h4>
+                    <div class="price">0円</div>
+                    <p>1週間無料</p>
+                    <ul class="features">
+                        <li>全機能利用可能</li>
+                        <li>いつでもキャンセルOK</li>
+                    </ul>
+                </div>
+                
+                <div class="price-card">
+                    <h4>🎯 スタートプラン</h4>
+                    <div class="price">500円</div>
+                    <p>初月のみ（キャンペーン）</p>
+                    <ul class="features">
+                        <li>口コミ返信自動化</li>
+                        <li>メール通知</li>
+                    </ul>
+                </div>
+                
+                <div class="price-card recommended">
+                    <h4>⭐ ベーシックプラン（人気）</h4>
+                    <div class="price">3,000円</div>
+                    <p>月額</p>
+                    <ul class="features">
+                        <li>口コミ返信自動化</li>
+                        <li>営業時間管理</li>
+                        <li>基本情報更新</li>
+                        <li>スマホ対応</li>
+                    </ul>
+                </div>
+                
+                <div class="price-card">
+                    <h4>🚀 スタンダードプラン</h4>
+                    <div class="price">7,000円</div>
+                    <p>月額</p>
+                    <ul class="features">
+                        <li>ベーシック機能全て</li>
+                        <li>複数店舗管理</li>
+                        <li>詳細分析レポート</li>
+                    </ul>
+                </div>
+                
+                <div class="price-card">
+                    <h4>👑 プレミアムプラン</h4>
+                    <div class="price">10,000円</div>
+                    <p>月額</p>
+                    <ul class="features">
+                        <li>全機能</li>
+                        <li>投稿スケジュール</li>
+                        <li>写真管理</li>
+                        <li>AI返信文生成</li>
+                        <li>AIブログ連携機能</li>
+                    </ul>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px; padding: 8px; background: #f8f9fa; border-radius: 5px;">
+                        ※AIブログ連携は別途AIブログシステムの<br>利用料金がかかります
+                    </p>
+                </div>
+                
+                <div class="price-card" style="border: 3px solid #FFD700; background: linear-gradient(135deg, #FFF9C4, #FFF59D);">
+                    <h4>🚀 超プレミアムプラン</h4>
+                    <div class="price" style="color: #FF6F00;">15,000円</div>
+                    <p>月額</p>
+                    <ul class="features">
+                        <li>プレミアム機能全て</li>
+                        <li>複数店舗管理</li>
+                        <li>店舗別AIブログ連携</li>
+                        <li>一斉投稿機能</li>
+                        <li>地域特化自動投稿</li>
+                    </ul>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px; padding: 8px; background: rgba(255,255,255,0.8); border-radius: 5px;">
+                        ※AIブログ連携は別途AIブログシステムの<br>利用料金がかかります
+                    </p>
+                </div>
+            </div>
+            
+            <div class="highlight-large">
+                💡 MEO業者：月3万円〜 vs 私たちのシステム：月3,000円〜<br>
+                <strong>さらに！AIブログ連携で「ブログ + MEO」が月10,000円〜</strong><br>
+                従来なら月5万円以上の作業が自動化
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #e8f5e8, #c8e6c9); padding: 20px; border-radius: 15px; margin: 20px 0; border: 3px solid #4CAF50;">
+                <h3 style="color: #2E7D32; margin-bottom: 15px;">💰 AIブログシステムとのセット割引</h3>
+                <table class="comparison-table">
+                    <tr>
+                        <th>利用パターン</th>
+                        <th>通常料金</th>
+                        <th>セット割引価格</th>
+                        <th>お得額</th>
+                    </tr>
+                    <tr>
+                        <td>MEO単体のみ</td>
+                        <td>3,000円〜15,000円</td>
+                        <td style="color: #2E7D32; font-weight: bold;">そのまま</td>
+                        <td>-</td>
+                    </tr>
+                    <tr style="background: #f0f8e6;">
+                        <td>AIブログ単体のみ</td>
+                        <td>AIブログシステム料金</td>
+                        <td style="color: #2E7D32; font-weight: bold;">そのまま</td>
+                        <td>-</td>
+                    </tr>
+                    <tr style="background: #fff9c4;">
+                        <td><strong>MEO + AIブログセット</strong></td>
+                        <td>MEO料金 + AIブログ料金</td>
+                        <td style="color: #d32f2f; font-weight: bold;">セット割引適用</td>
+                        <td style="color: #d32f2f; font-weight: bold;">詳細はお問い合わせ</td>
+                    </tr>
+                </table>
+                
+                <p style="font-size: 14px; margin-top: 15px; color: #2E7D32;">
+                    <strong>🎯 セット利用のメリット：</strong><br>
+                    ✓ 料金がお得になります<br>
+                    ✓ ブログとMEOの連携効果で集客力大幅アップ<br>
+                    ✓ 一つの管理画面で全て完結<br>
+                    ✓ サポートも一本化で安心
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📊 導入効果の例</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="solution-box" style="text-align: center;">
+                    <div style="font-size: 40px;">📈</div>
+                    <h4>Google検索順位</h4>
+                    <p><strong>15位 → 3位</strong></p>
+                    <p>（3ヶ月後）</p>
+                </div>
+                
+                <div class="solution-box" style="text-align: center;">
+                    <div style="font-size: 40px;">👥</div>
+                    <h4>月間来店客数</h4>
+                    <p><strong>120人 → 200人</strong></p>
+                    <p>（6ヶ月後）</p>
+                </div>
+                
+                <div class="solution-box" style="text-align: center;">
+                    <div style="font-size: 40px;">⭐</div>
+                    <h4>口コミ評価</h4>
+                    <p><strong>3.2 → 4.1</strong></p>
+                    <p>（返信率向上で）</p>
+                </div>
+                
+                <div class="solution-box" style="text-align: center;">
+                    <div style="font-size: 40px;">⏰</div>
+                    <h4>作業時間短縮</h4>
+                    <p><strong>1日30分 → 5分</strong></p>
+                    <p>（25分の時短）</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🛡️ 安心・安全について</h2>
+            
+            <div class="info-box">
+                <h3>🔐 「勝手にお店の情報を変更される心配はありません」</h3>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>心配ごと</th>
+                        <th>私たちの対策</th>
+                        <th>わかりやすく言うと</th>
+                    </tr>
+                    <tr>
+                        <td>勝手に情報を変更される？</td>
+                        <td>あなたが許可した操作のみ実行</td>
+                        <td>「合鍵を渡すが、特定の部屋にしか入れない」</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td>個人情報が漏れる？</td>
+                        <td>銀行レベルの暗号化で保護</td>
+                        <td>「手紙を厳重な封筒に入れて送る」</td>
+                    </tr>
+                    <tr>
+                        <td>やめたくなったら？</td>
+                        <td>いつでも即座に解約可能</td>
+                        <td>「嫌になったらいつでも契約解除OK」</td>
+                    </tr>
+                    <tr style="background: #f8f9fa;">
+                        <td>システムが壊れたら？</td>
+                        <td>24時間365日監視体制</td>
+                        <td>「夜中でも見張り番がいる状態」</td>
+                    </tr>
+                </table>
+                
+                <div class="highlight">
+                    <strong>🏦 Googleが公式に提供している仕組みを使用：</strong><br>
+                    私たちは勝手にシステムを作ったわけではなく、Googleが「お店の方々の業務効率化のために」と正式に提供している仕組みを活用しています。銀行のATMと同じレベルの安全性です。
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🚀 導入の流れ（簡単3ステップ）</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="flow-step" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                    <div class="flow-number">1</div>
+                    <div>
+                        <strong>📝 お申込み（5分）</strong><br>
+                        Webフォームにお店の基本情報を入力するだけ
+                    </div>
+                </div>
+                
+                <div class="flow-arrow">⬇️</div>
+                
+                <div class="flow-step" style="background: linear-gradient(135deg, #e8f5e8, #c8e6c9);">
+                    <div class="flow-number">2</div>
+                    <div>
+                        <strong>🔗 Google連携（3分）</strong><br>
+                        「Googleと連携しますか？」→「はい」をクリック<br>
+                        <small>（画面の指示に従うだけで自動設定）</small>
+                    </div>
+                </div>
+                
+                <div class="flow-arrow">⬇️</div>
+                
+                <div class="flow-step" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
+                    <div class="flow-number">3</div>
+                    <div>
+                        <strong>✅ 完了（その日から利用開始）</strong><br>
+                        あとは何もしなくてOK！システムが24時間お店を見守ります
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-large">
+                ⏱️ お客様の作業時間：たった8分<br>
+                💪 設定完了後：何もしなくてOK、システムが自動で働きます
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>❓ よくある質問</h2>
+            
+            <div style="display: grid; gap: 20px;">
+                <div class="info-box">
+                    <h4>Q: AIブログ連携の料金はいくら？</h4>
+                    <p>A: AIブログシステムは別途料金が発生しますが、MEOシステムとセット利用で割引適用！詳細料金はお問い合わせください。</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Q: AIブログなしでMEO機能だけ使える？</h4>
+                    <p>A: もちろん可能です！MEO機能単体でも十分な効果を発揮します。後からAIブログ連携を追加することもできます。</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Q: 複数店舗管理は何店舗まで対応？</h4>
+                    <p>A: 上限はありません。それぞれの店舗に地域特化した投稿を自動生成し、一斉管理できます。</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Q: 本当に効果はある？</h4>
+                    <p>A: 1週間無料お試しがあるので、まずは効果を実感してください。実際にGoogle検索順位の変化を確認いただけます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 style="color: white; border: none; margin-bottom: 30px;">🎯 今すぐ始めて、お店をGoogle検索で上位表示させましょう</h2>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 15px; margin: 20px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">🚀 1週間無料お試し実施中</h3>
+                <p style="font-size: 18px; margin-bottom: 20px;">
+                    効果を実感してから続けるかどうか決めてください<br>
+                    <strong>リスクなし！</strong>
+                </p>
+                
+                <div style="background: white; color: #333; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h4>🚀 今すぐ無料トライアル開始</h4>
+                    <p><strong>完全セルフサービス型</strong></p>
+                    <p>✅ オンライン申込みで即日利用開始</p>
+                    <p>✅ システムが自動で全て設定</p>
+                    <p>✅ 面倒な打ち合わせ一切なし</p>
+                    <p><strong>KAI Techno Web Design 開発</strong></p>
+                </div>
+                
+                <p style="font-size: 16px; opacity: 0.9;">
+                    <strong>「手作業の時代は終了」<br>
+                    AIとテクノロジーが、あなたのお店を自動で成長させます</strong>
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
